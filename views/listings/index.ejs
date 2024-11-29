@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate") -%> 
+<style>
+    #filters{
+        display: flex;
+        flex-wrap: wrap;
+
+        .filter{
+            text-align: center;
+            margin: 7px;
+            margin-right: 15px;
+            opacity: 0.7;
+
+            &:hover{
+                opacity: 1;
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+</style>
+<body>
+    <!-- <h3>All Listings</h3> -->
+    <div id="filters">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            Trending
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            Rooms
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-city"></i></div>
+            Iconic Cities
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-city"></i></i></div>
+            Mountains
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            Beaches
+        </div>
+        <div class="filter">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            Castles
+        </div>
+        <div class="filter">
+            <div><i class="fa-regular fa-futbol"></i></div>
+            Sports
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            Amazing Pools
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tents"></i></div>
+            Camping
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tractor"></i></div>
+            Farms
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            Arctic
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tree-city"></i></div>
+            Tree Houses
+        </div>
+    </div>
+    <!-- <form action="/listings/new" method="get"><button>Create New Listing</button></form> -->
+     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mt-3">
+        <% for(let listing of allListings) { %>
+            <a href="/listings/<%=listing._id%>" class="listclick">
+                <div class="card listing-card" style="width: 250px;">
+                    <img src="<%= listing.image %>" class="card-img-top" alt="listing_image" style="height: 250px;">
+                    <div class="card-body">
+                    <p class="card-text">
+                        <b><%= listing.title %></b><br>
+                        &#8377;<%= listing.price %> / night
+                    </p>
+                </div>
+            </div>
+        </a>
+        <% } %>
+     </div>
+    
+</body>
+
+

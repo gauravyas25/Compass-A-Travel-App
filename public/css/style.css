@@ -1,0 +1,88 @@
+body{
+        font-family: "Plus Jakarta Sans", sans-serif !;
+        font-optical-sizing: auto;
+        font-weight: 500;
+         
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+}
+
+
+.navbar{
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.finfolinks a{
+    text-decoration: none;
+    color: rgb(30, 26, 26);
+}
+
+.finfolinks a :hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.finfolinks{
+    width: 100%;
+}
+
+.finfosocials{
+    width: 100%;
+    font-size: 20px;
+}
+
+.finfosocials i{
+    margin: 5px;
+}
+
+.finfo{
+    display: flex;
+    font-size: 15px;
+    background-color: rgb(220, 218, 218);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.listing-card{
+    border: none !important;
+    margin: 10px;
+}
+
+.card-img-top{
+    border-radius: 20px !important;
+    width: 100%;
+    object-fit: cover !important;
+    opacity: 1;
+}
+
+.card-body{
+    padding: 5px !important;
+}
+
+.card-text p{
+    font-weight: 400;
+}
+
+.listclick{
+    text-decoration: none !important;
+    opacity: 1;
+}
+
+
+.show-img{
+    height: 20vh;
+}
+
+#map{
+    height: 500px;
+    width: 60vh;
+}
